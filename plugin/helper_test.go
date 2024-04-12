@@ -48,7 +48,7 @@ func (t *TestingBinaryMessenger) SendWithReply(channel string, message []byte) (
 	return r.binaryReply, nil
 }
 
-// SetMessageHandler registers a binary message handler on given channel.
+// SetChannelHandler registers a binary message handler on given channel.
 // In this testing implementation of a BinaryMessenger, the handler may be
 // executed by calling MockSend(..).
 func (t *TestingBinaryMessenger) SetChannelHandler(channel string, handler ChannelHandlerFunc) {

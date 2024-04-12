@@ -214,7 +214,7 @@ func (p *textinputPlugin) addText(text rune) {
 	p.updateEditingState()
 }
 
-// UpupdateEditingState updates the TextInput with the current state by invoking
+// updateEditingState updates the TextInput with the current state by invoking
 // TextInputClient.updateEditingState in the flutter framework
 func (p *textinputPlugin) updateEditingState() {
 	p.ed.Text = string(utf16.Decode(p.ed.utf16Text))
@@ -234,7 +234,7 @@ func (p *textinputPlugin) performAction(action string) {
 	})
 }
 
-// performClientAction invokes the TextInputClient performAction of the
+// performTextInputAction invokes the TextInputClient performAction of the
 // TextInputAction. The action is described by argSetClientConf.
 func (p *textinputPlugin) performTextInputAction() {
 	p.performAction(p.clientConf.InputAction)
